@@ -1,4 +1,4 @@
-﻿<model publish="10000" version="7">
+﻿<model version="7" publish="10000">
   <entities>
     <entity schema="account">
       <properties>
@@ -113,6 +113,7 @@
       <properties>
         <property schema="activityid" />
         <property schema="activitypartyid" />
+        <property schema="addressused" />
         <property schema="participationtypemask" />
         <property schema="partyid" />
       </properties>
@@ -505,12 +506,18 @@
         <property schema="isamounttype" />
         <property schema="lowquantity" />
         <property schema="modifiedon" />
+        <property schema="name" />
         <property schema="percentage" />
       </properties>
       <indexes>
         <index schema="idx_discount_discounttypeid" issystem="true">
           <fields>
             <field schema="discounttypeid" />
+          </fields>
+        </index>
+        <index schema="idx_discount_name" issystem="true">
+          <fields>
+            <field schema="name" />
           </fields>
         </index>
       </indexes>
@@ -677,6 +684,7 @@
         <property schema="createdon" />
         <property schema="extendedamount" />
         <property schema="invoicedetailid" />
+        <property schema="invoicedetailname" />
         <property schema="invoiceid" />
         <property schema="ispriceoverridden" />
         <property schema="isproductoverridden" />
@@ -716,6 +724,11 @@
         <index schema="idx_invoicedetail_uomid" issystem="true">
           <fields>
             <field schema="uomid" />
+          </fields>
+        </index>
+        <index schema="idx_invoicedetail_invoicedetailname" issystem="true">
+          <fields>
+            <field schema="invoicedetailname" />
           </fields>
         </index>
       </indexes>
@@ -2103,6 +2116,7 @@
         <property schema="productid" />
         <property schema="quantity" />
         <property schema="quotedetailid" />
+        <property schema="quotedetailname" />
         <property schema="quoteid" />
         <property schema="tax" />
         <property schema="transactioncurrencyid" />
@@ -2135,7 +2149,208 @@
             <field schema="uomid" />
           </fields>
         </index>
+        <index schema="idx_quotedetail_quotedetailname" issystem="true">
+          <fields>
+            <field schema="quotedetailname" />
+          </fields>
+        </index>
       </indexes>
+    </entity>
+    <entity schema="resco_devicecontrol">
+      <properties>
+        <property schema="createdby" />
+        <property schema="createdon" />
+        <property schema="createdonbehalfby" />
+        <property schema="importsequencenumber" />
+        <property schema="modifiedby" />
+        <property schema="modifiedon" />
+        <property schema="modifiedonbehalfby" />
+        <property schema="overriddencreatedon" />
+        <property schema="ownerid" />
+        <property schema="owningbusinessunit" />
+        <property schema="owningteam" />
+        <property schema="owninguser" />
+        <property schema="resco_devicecontrolid" />
+        <property schema="resco_deviceid" />
+        <property schema="resco_entityname" />
+        <property schema="resco_mobiledeviceid" />
+        <property schema="resco_recordid" />
+        <property schema="resco_requestdata" />
+        <property schema="resco_requesttype" />
+        <property schema="resco_responsecode" />
+        <property schema="resco_responsedata" />
+        <property schema="resco_responsedata1" />
+        <property schema="resco_responsedata2" />
+        <property schema="resco_responsedata3" />
+        <property schema="resco_responsedata4" />
+        <property schema="resco_responsedata5" />
+        <property schema="resco_responsedata6" />
+        <property schema="resco_responsedata7" />
+        <property schema="resco_responsedata8" />
+        <property schema="resco_responsedata9" />
+        <property schema="resco_responsedatalength" />
+        <property schema="resco_responsestatus" />
+        <property schema="statecode" />
+        <property schema="statuscode" />
+        <property schema="timezoneruleversionnumber" />
+        <property schema="utcconversiontimezonecode" />
+        <property schema="versionnumber" />
+      </properties>
+      <indexes>
+        <index schema="idx_resco_devicecontrol_createdby" issystem="true">
+          <fields>
+            <field schema="createdby" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_createdonbehalfby" issystem="true">
+          <fields>
+            <field schema="createdonbehalfby" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_modifiedby" issystem="true">
+          <fields>
+            <field schema="modifiedby" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_modifiedonbehalfby" issystem="true">
+          <fields>
+            <field schema="modifiedonbehalfby" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owningteam" issystem="true">
+          <fields>
+            <field schema="owningteam" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
+          <fields>
+            <field schema="owninguser" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_resco_mobiledeviceid" issystem="true">
+          <fields>
+            <field schema="resco_mobiledeviceid" />
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_resco_deviceid" issystem="true">
+          <fields>
+            <field schema="resco_deviceid" />
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_mobilereport">
+      <properties>
+        <property schema="createdon" />
+        <property schema="modifiedon" />
+        <property schema="ownerid" />
+        <property schema="resco_data" />
+        <property schema="resco_entityname" />
+        <property schema="resco_languagecode" />
+        <property schema="resco_mobilereportid" />
+        <property schema="resco_name" />
+        <property schema="resco_sourcetype" />
+        <property schema="statuscode" />
+      </properties>
+      <indexes>
+        <index schema="idx_resco_mobilereport_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid" />
+          </fields>
+        </index>
+        <index schema="idx_resco_mobilereport_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name" />
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_question">
+      <properties>
+        <property schema="createdon" />
+        <property schema="modifiedon" />
+        <property schema="ownerid" />
+        <property schema="resco_answeredon" />
+        <property schema="resco_answerstorage" />
+        <property schema="resco_defaultvalue" />
+        <property schema="resco_description" />
+        <property schema="resco_displayformat" />
+        <property schema="resco_icon" />
+        <property schema="resco_index" />
+        <property schema="resco_isseparator" />
+        <property schema="resco_kind" />
+        <property schema="resco_label" />
+        <property schema="resco_max" />
+        <property schema="resco_min" />
+        <property schema="resco_name" />
+        <property schema="resco_options" />
+        <property schema="resco_precision" />
+        <property schema="resco_questiongroupid" />
+        <property schema="resco_questionid" />
+        <property schema="resco_questionnaireid" />
+        <property schema="resco_rawdatevalue" />
+        <property schema="resco_rawidvalue" />
+        <property schema="resco_rawnumericvalue" />
+        <property schema="resco_required" />
+        <property schema="resco_showonreport" />
+        <property schema="resco_style" />
+        <property schema="resco_value" />
+        <property schema="resco_valuelabel" />
+        <property schema="resco_visible" />
+        <property schema="statuscode" />
+      </properties>
+    </entity>
+    <entity schema="resco_questiongroup">
+      <properties>
+        <property schema="createdon" />
+        <property schema="modifiedon" />
+        <property schema="ownerid" />
+        <property schema="resco_description" />
+        <property schema="resco_expanded" />
+        <property schema="resco_index" />
+        <property schema="resco_label" />
+        <property schema="resco_name" />
+        <property schema="resco_questiongroupid" />
+        <property schema="resco_questionnaireid" />
+        <property schema="resco_repeatconfig" />
+        <property schema="resco_repeatindex" />
+        <property schema="resco_rules" />
+        <property schema="resco_templategroupid" />
+        <property schema="resco_visible" />
+        <property schema="statuscode" />
+      </properties>
+    </entity>
+    <entity schema="resco_questionnaire">
+      <properties>
+        <property schema="createdon" />
+        <property schema="modifiedon" />
+        <property schema="ownerid" />
+        <property schema="resco_completionstatus" />
+        <property schema="resco_description" />
+        <property schema="resco_folder" />
+        <property schema="resco_issnippet" />
+        <property schema="resco_istemplate" />
+        <property schema="resco_languagecode" />
+        <property schema="resco_name" />
+        <property schema="resco_options" />
+        <property schema="resco_questionnaireid" />
+        <property schema="resco_rules" />
+        <property schema="resco_script" />
+        <property schema="resco_serializedanswers" />
+        <property schema="resco_styles" />
+        <property schema="resco_templateid" />
+        <property schema="statuscode" />
+      </properties>
     </entity>
     <entity schema="role">
       <properties>
