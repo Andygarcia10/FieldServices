@@ -1,7 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="6" publish="10000">
+﻿<model publish="10000" version="7">
   <entities>
-    <entity schema="account" permissions="0">
+    <entity schema="account">
       <properties>
         <property schema="accountid" />
         <property schema="address1_city" />
@@ -79,7 +78,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="activity" permissions="0">
+    <entity schema="activity">
       <properties>
         <property schema="activityid" />
         <property schema="createdon" />
@@ -110,7 +109,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="activityparty" permissions="0">
+    <entity schema="activityparty">
       <properties>
         <property schema="activityid" />
         <property schema="activitypartyid" />
@@ -130,7 +129,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="annotation" permissions="0">
+    <entity schema="annotation">
       <properties>
         <property schema="annotationid" />
         <property schema="createdon" />
@@ -164,7 +163,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="appointment" permissions="0">
+    <entity schema="appointment">
       <properties>
         <property schema="activityid" />
         <property schema="createdon" />
@@ -205,7 +204,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookableresource" permissions="0">
+    <entity schema="bookableresource">
       <properties>
         <property schema="bookableresourceid" />
         <property schema="createdon" />
@@ -243,7 +242,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookableresourcebooking" permissions="0">
+    <entity schema="bookableresourcebooking">
       <properties>
         <property schema="bookableresourcebookingid" />
         <property schema="bookingstatus" />
@@ -315,7 +314,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookableresourcecategory" permissions="0">
+    <entity schema="bookableresourcecategory">
       <properties>
         <property schema="bookableresourcecategoryid" />
         <property schema="createdon" />
@@ -336,7 +335,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookableresourcecharacteristic" permissions="0">
+    <entity schema="bookableresourcecharacteristic">
       <properties>
         <property schema="bookableresourcecharacteristicid" />
         <property schema="createdon" />
@@ -357,7 +356,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookingstatus" permissions="0">
+    <entity schema="bookingstatus">
       <properties>
         <property schema="bookingstatusid" />
         <property schema="createdon" />
@@ -383,7 +382,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="businessunit" permissions="0">
+    <entity schema="businessunit">
       <properties>
         <property schema="address2_city" />
         <property schema="address2_country" />
@@ -408,7 +407,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="campaign" permissions="0">
+    <entity schema="campaign">
       <properties>
         <property schema="campaignid" />
         <property schema="createdon" />
@@ -429,7 +428,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="characteristic" permissions="0">
+    <entity schema="characteristic">
       <properties>
         <property schema="characteristicid" />
         <property schema="characteristictype" />
@@ -451,7 +450,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="contact" permissions="0">
+    <entity schema="contact">
       <properties>
         <property schema="address1_city" displayformat="Barcode" />
         <property schema="address1_country" />
@@ -496,7 +495,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="discount" permissions="0">
+    <entity schema="discount">
       <properties>
         <property schema="amount" />
         <property schema="createdon" />
@@ -516,7 +515,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="discounttype" class="false" permissions="0">
+    <entity class="false" schema="discounttype">
       <properties>
         <property schema="createdon" />
         <property schema="description" />
@@ -533,7 +532,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="email" permissions="0">
+    <entity schema="email">
       <properties>
         <property schema="activityid" />
         <property schema="actualdurationminutes" />
@@ -576,7 +575,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="incident" permissions="0">
+    <entity schema="incident">
       <properties>
         <property schema="casetypecode" />
         <property schema="createdon" />
@@ -615,7 +614,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="invoice" permissions="0">
+    <entity schema="invoice">
       <properties>
         <property schema="createdon" />
         <property schema="customerid" />
@@ -673,7 +672,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="invoicedetail" permissions="0">
+    <entity schema="invoicedetail">
       <properties>
         <property schema="createdon" />
         <property schema="extendedamount" />
@@ -721,7 +720,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_bookingsetupmetadata" permissions="0">
+    <entity schema="msdyn_bookingsetupmetadata">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -754,7 +753,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_bookingtimestamp" permissions="0">
+    <entity schema="msdyn_bookingtimestamp">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -785,7 +784,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_customerasset" permissions="0">
+    <entity schema="msdyn_customerasset">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -830,7 +829,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_fieldservicepricelistitem" permissions="0">
+    <entity schema="msdyn_fieldservicepricelistitem">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -863,7 +862,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_fieldservicesetting" permissions="0">
+    <entity schema="msdyn_fieldservicesetting">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -885,7 +884,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_incidenttype" permissions="0">
+    <entity schema="msdyn_incidenttype">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -916,7 +915,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_payment" permissions="0">
+    <entity schema="msdyn_payment">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -964,7 +963,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_paymentdetail" permissions="0">
+    <entity schema="msdyn_paymentdetail">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1005,7 +1004,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_paymentmethod" permissions="0">
+    <entity schema="msdyn_paymentmethod">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1027,7 +1026,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_paymentterm" permissions="0">
+    <entity schema="msdyn_paymentterm">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1049,7 +1048,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_priority" permissions="0">
+    <entity schema="msdyn_priority">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1070,7 +1069,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_productinventory" permissions="0">
+    <entity schema="msdyn_productinventory">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1110,7 +1109,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_resourcepaytype" permissions="0">
+    <entity schema="msdyn_resourcepaytype">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1131,7 +1130,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_servicetasktype" permissions="0">
+    <entity schema="msdyn_servicetasktype">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1156,7 +1155,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_shipvia" permissions="0">
+    <entity schema="msdyn_shipvia">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1177,7 +1176,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_taxcode" permissions="0">
+    <entity schema="msdyn_taxcode">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1202,7 +1201,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_taxcodedetail" permissions="0">
+    <entity schema="msdyn_taxcodedetail">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1237,7 +1236,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_timeoffrequest" permissions="0">
+    <entity schema="msdyn_timeoffrequest">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1275,7 +1274,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_warehouse" permissions="0">
+    <entity schema="msdyn_warehouse">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1297,7 +1296,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorder" permissions="0">
+    <entity schema="msdyn_workorder">
       <properties>
         <property schema="createdby" />
         <property schema="createdon" />
@@ -1447,7 +1446,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderincident" permissions="0">
+    <entity schema="msdyn_workorderincident">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1498,7 +1497,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderproduct" permissions="0">
+    <entity schema="msdyn_workorderproduct">
       <properties>
         <property schema="createdon" />
         <property schema="exchangerate" />
@@ -1620,7 +1619,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderservice" permissions="0">
+    <entity schema="msdyn_workorderservice">
       <properties>
         <property schema="createdon" />
         <property schema="exchangerate" />
@@ -1737,7 +1736,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderservicetask" permissions="0">
+    <entity schema="msdyn_workorderservicetask">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1795,7 +1794,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workordersubstatus" permissions="0">
+    <entity schema="msdyn_workordersubstatus">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1820,7 +1819,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workordertype" permissions="0">
+    <entity schema="msdyn_workordertype">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -1852,7 +1851,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="phonecall" permissions="0">
+    <entity schema="phonecall">
       <properties>
         <property schema="activityid" />
         <property schema="actualdurationminutes" />
@@ -1894,7 +1893,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="pricelevel" permissions="0">
+    <entity schema="pricelevel">
       <properties>
         <property schema="begindate" />
         <property schema="createdon" />
@@ -1917,7 +1916,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="product" permissions="0">
+    <entity schema="product">
       <properties>
         <property schema="createdon" />
         <property schema="currentcost" />
@@ -1991,7 +1990,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="productpricelevel" permissions="0">
+    <entity schema="productpricelevel">
       <properties>
         <property schema="amount" />
         <property schema="createdon" />
@@ -2037,7 +2036,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="quote" permissions="0">
+    <entity schema="quote">
       <properties>
         <property schema="createdon" />
         <property schema="customerid" />
@@ -2090,7 +2089,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="quotedetail" permissions="0">
+    <entity schema="quotedetail">
       <properties>
         <property schema="createdon" />
         <property schema="extendedamount" />
@@ -2138,7 +2137,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="role" permissions="0">
+    <entity schema="role">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -2153,7 +2152,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="service" class="false" permissions="0">
+    <entity class="false" schema="service">
       <properties>
         <property schema="createdon" />
         <property schema="description" />
@@ -2171,7 +2170,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="serviceappointment" permissions="0">
+    <entity schema="serviceappointment">
       <properties>
         <property schema="activityid" />
         <property schema="createdon" />
@@ -2215,7 +2214,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="site" permissions="0">
+    <entity schema="site">
       <properties>
         <property schema="address1_city" />
         <property schema="address1_country" />
@@ -2240,7 +2239,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="subject" permissions="0">
+    <entity schema="subject">
       <properties>
         <property schema="createdon" />
         <property schema="description" />
@@ -2262,7 +2261,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="systemuser" permissions="0">
+    <entity schema="systemuser">
       <properties>
         <property schema="address1_latitude" />
         <property schema="address1_longitude" />
@@ -2297,7 +2296,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="task" permissions="0">
+    <entity schema="task">
       <properties>
         <property schema="activityid" />
         <property schema="actualdurationminutes" />
@@ -2336,7 +2335,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="territory" permissions="0">
+    <entity schema="territory">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
@@ -2351,7 +2350,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="transactioncurrency" class="false" permissions="0">
+    <entity class="false" schema="transactioncurrency">
       <properties>
         <property schema="createdon" />
         <property schema="currencyname" />
@@ -2371,7 +2370,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="uom" permissions="0">
+    <entity schema="uom">
       <properties>
         <property schema="baseuom" />
         <property schema="createdon" />
@@ -2400,7 +2399,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="uomschedule" class="false" permissions="0">
+    <entity class="false" schema="uomschedule">
       <properties>
         <property schema="createdon" />
         <property schema="modifiedon" />
