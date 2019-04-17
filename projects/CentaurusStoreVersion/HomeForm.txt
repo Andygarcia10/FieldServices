@@ -1,0 +1,1 @@
+﻿@Dashboard;;Performance Dashboard,account,contact,bookableresourcebooking;Reserva de recursos;<extra><actions>19;;1</actions></extra>,msdyn_workorder;;msdyn_workorder.MainWorkOrderList,product,msdyn_customerasset,msdyn_timeoffrequest,@activity,@Map;;Map,@Setup,@About
